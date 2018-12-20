@@ -18,7 +18,11 @@ package me.tabacowang.mvvmarch.di
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 import me.tabacowang.mvvmarch.shared.di.ActivityScoped
+import me.tabacowang.mvvmarch.ui.LaunchModule
+import me.tabacowang.mvvmarch.ui.LauncherActivity
 import me.tabacowang.mvvmarch.ui.MainActivity
+import me.tabacowang.mvvmarch.ui.onboarding.OnboardingActivity
+import me.tabacowang.mvvmarch.ui.onboarding.OnboardingModule
 
 /**
  * We want Dagger.Android to create a Subcomponent which has a parent Component of whichever module
@@ -32,13 +36,13 @@ import me.tabacowang.mvvmarch.ui.MainActivity
 @Module
 abstract class ActivityBindingModule {
 
-//    @ActivityScoped
-//    @ContributesAndroidInjector(modules = [LaunchModule::class])
-//    internal abstract fun launcherActivity(): LauncherActivity
-//
-//    @ActivityScoped
-//    @ContributesAndroidInjector(modules = [OnboardingModule::class])
-//    internal abstract fun onboardingActivity(): OnboardingActivity
+    @ActivityScoped
+    @ContributesAndroidInjector(modules = [LaunchModule::class])
+    internal abstract fun launcherActivity(): LauncherActivity
+
+    @ActivityScoped
+    @ContributesAndroidInjector(modules = [OnboardingModule::class])
+    internal abstract fun onboardingActivity(): OnboardingActivity
 
     @ActivityScoped
     @ContributesAndroidInjector(

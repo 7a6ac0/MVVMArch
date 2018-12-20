@@ -20,6 +20,9 @@ import android.content.Context
 import dagger.Module
 import dagger.Provides
 import me.tabacowang.mvvmarch.MainApplication
+import me.tabacowang.mvvmarch.shared.data.pref.PreferenceStorage
+import me.tabacowang.mvvmarch.shared.data.pref.SharedPreferenceStorage
+import javax.inject.Singleton
 
 /**
  * Defines all the classes that need to be provided in the scope of the app.
@@ -34,5 +37,10 @@ class AppModule {
     fun provideContext(application: MainApplication): Context {
         return application.applicationContext
     }
+
+    @Singleton
+    @Provides
+    fun providesPreferenceStorage(context: Context): PreferenceStorage =
+        SharedPreferenceStorage(context)
 
 }

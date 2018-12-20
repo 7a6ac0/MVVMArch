@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="onboarding_actions_height">112dp</dimen>
+    <dimen name="onboarding_margins">48dp</dimen>
+    <dimen name="onboarding_animation_padding">8dp</dimen>
+</resources>

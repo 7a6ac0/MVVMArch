@@ -13,8 +13,23 @@
             android:theme="@style/AppTheme">
 
         <activity
+                android:name=".ui.LauncherActivity"
+                android:theme="@style/AppTheme.Launcher">
+            <!-- This will have to be placed wherever the activity-alias is linking to. -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
                 android:name=".ui.MainActivity"
                 android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+                android:name=".ui.onboarding.OnboardingActivity"
+                android:theme="@style/AppTheme.Onboarding" />
 
     </application>
 </manifest>

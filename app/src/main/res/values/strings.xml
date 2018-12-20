@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MVVMArch</string>
+
+    <string name="onboarding_get_started">Get started</string>
+    <string name="onboarding_welcome_title">Welcome to MVVMArch</string>
+    <string name="onboarding_date_location">November 7–8, 2018\nMountain View, CA</string>
 </resources>
