@@ -3,5 +3,9 @@
 
     <string name="onboarding_get_started">Get started</string>
     <string name="onboarding_welcome_title">Welcome to MVVMArch</string>
-    <string name="onboarding_date_location">November 7–8, 2018\nMountain View, CA</string>
+
+    <string name="title_schedule">Schedule</string>
+    <string name="title_info">Info</string>
+    <string name="title_agenda">Agenda</string>
+
 </resources>

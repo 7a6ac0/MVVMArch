@@ -3,4 +3,6 @@
     <dimen name="onboarding_actions_height">112dp</dimen>
     <dimen name="onboarding_margins">48dp</dimen>
     <dimen name="onboarding_animation_padding">8dp</dimen>
+
+    <dimen name="bottom_navigation_height">56dp</dimen>
 </resources>
