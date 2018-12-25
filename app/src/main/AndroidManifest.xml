@@ -31,5 +31,10 @@
                 android:name=".ui.onboarding.OnboardingActivity"
                 android:theme="@style/AppTheme.Onboarding" />
 
+        <activity
+                android:name=".ui.scheduledetail.ScheduleDetailActivity"
+                android:parentActivityName=".ui.MainActivity"
+                android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 </manifest>

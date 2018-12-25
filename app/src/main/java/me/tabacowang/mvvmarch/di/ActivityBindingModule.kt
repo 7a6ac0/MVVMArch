@@ -21,9 +21,13 @@ import me.tabacowang.mvvmarch.shared.di.ActivityScoped
 import me.tabacowang.mvvmarch.ui.LaunchModule
 import me.tabacowang.mvvmarch.ui.LauncherActivity
 import me.tabacowang.mvvmarch.ui.MainActivity
+import me.tabacowang.mvvmarch.ui.agenda.AgendaModule
+import me.tabacowang.mvvmarch.ui.info.InfoModule
 import me.tabacowang.mvvmarch.ui.onboarding.OnboardingActivity
 import me.tabacowang.mvvmarch.ui.onboarding.OnboardingModule
 import me.tabacowang.mvvmarch.ui.schedule.ScheduleModule
+import me.tabacowang.mvvmarch.ui.scheduledetail.ScheduleDetailActivity
+import me.tabacowang.mvvmarch.ui.scheduledetail.ScheduleDetailModule
 
 /**
  * We want Dagger.Android to create a Subcomponent which has a parent Component of whichever module
@@ -48,20 +52,20 @@ abstract class ActivityBindingModule {
     @ActivityScoped
     @ContributesAndroidInjector(
         modules = [
-            ScheduleModule::class
+            ScheduleModule::class,
+            InfoModule::class,
+            AgendaModule::class
         ]
     )
     internal abstract fun mainActivity(): MainActivity
-//
-//    @ActivityScoped
-//    @ContributesAndroidInjector(
-//        modules = [
-//            SessionDetailModule::class,
-//            SignInDialogModule::class,
-//            PreferenceModule::class
-//        ]
-//    )
-//    internal abstract fun sessionDetailActivity(): SessionDetailActivity
+
+    @ActivityScoped
+    @ContributesAndroidInjector(
+        modules = [
+            ScheduleDetailModule::class
+        ]
+    )
+    internal abstract fun scheduleDetailActivity(): ScheduleDetailActivity
 //
 //    @ActivityScoped
 //    @ContributesAndroidInjector(

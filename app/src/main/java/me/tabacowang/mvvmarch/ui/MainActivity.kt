@@ -10,6 +10,8 @@ import me.tabacowang.mvvmarch.R
 import me.tabacowang.mvvmarch.shared.util.consume
 import me.tabacowang.mvvmarch.shared.util.inTransaction
 import me.tabacowang.mvvmarch.shared.util.viewModelProvider
+import me.tabacowang.mvvmarch.ui.agenda.AgendaFragment
+import me.tabacowang.mvvmarch.ui.info.InfoFragment
 import me.tabacowang.mvvmarch.ui.schedule.ScheduleFragment
 import me.tabacowang.mvvmarch.ui.schedule.ScheduleViewModel
 import javax.inject.Inject
@@ -38,11 +40,11 @@ class MainActivity : DaggerAppCompatActivity() {
                 }
                 R.id.navigation_info -> consume {
                     // Scroll to current event next time the schedule is opened.
-//                    replaceFragment(InfoFragment())
+                    replaceFragment(InfoFragment())
                 }
                 R.id.navigation_agenda -> consume {
                     // Scroll to current event next time the schedule is opened.
-//                    replaceFragment(AgendaFragment())
+                    replaceFragment(AgendaFragment())
                 }
                 else -> false
             }
