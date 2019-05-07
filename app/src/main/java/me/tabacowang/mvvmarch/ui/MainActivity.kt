@@ -30,9 +30,6 @@ class MainActivity : DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // This VM instance is shared between activity and fragments, as it's scoped to MainActivity
-        val scheduleViewModel: ScheduleViewModel = viewModelProvider(viewModelFactory)
-
         navigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.navigation_schedule -> consume {
